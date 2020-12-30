@@ -7,11 +7,8 @@ client.once('ready', () => {
 });
 
 client.on('message', async msg => {
-  if (!msg.content.startsWith(prefix) || msg.channel.type === 'dm' || msg.author.bot) return;
-  const args = msg.content.slice(prefix.length).trim().split(' ');
-  const command = args.shift().toLowerCase();
 
-  if (command == 'ping') {
+  if (msg.content.toLocaleLowerCase() == 'ping') {
     msg.channel.send('Pong');
     msg.channel.send('*blushes :pleading_face:');
   }
