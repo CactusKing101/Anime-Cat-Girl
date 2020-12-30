@@ -16,3 +16,5 @@ client.on('message', async msg => {
     msg.channel.send('*blushes :pleading_face:');
   }
 });
+
+client.login(config.token);
